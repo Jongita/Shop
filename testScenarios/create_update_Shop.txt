@@ -1,0 +1,52 @@
+Create a Shop Scenario:
+
+Use method POST http://localhost:3000/shops
+
+Requirement: 
+
+Successfully create a shop.
+Request: POST /shops with JSON body:
+
+{   
+    "name": "Mira Shop", 
+    "location": "Klaipeda" 
+}
+
+
+Expected Result: 
+
+Status code 201 Created and response body containing the shop object with an id.
+
+
+Result:
+{
+    "id": "1725363364807",
+    "name": "Mira Shop",
+    "location": "Klaipeda"
+}
+Status: 201 Created
+
+Update a Shop Scenario:
+
+Use method PUT http://localhost:3000/shops/1725363364807
+
+Requirement: 
+
+Successfully update a shop with a valid ID.
+Request: PUT /shops/1725363364807 with a valid shop ID and JSON body:
+{ 
+    "name": "Mira Shop,
+    "location": "Vilnius" 
+    }.
+Expected Result: 
+
+Status code 200 OK and response body containing the updated shop object.
+
+Result:
+{
+    "name": "Mira Shop",
+    "location": "Vilnius"
+}
+
+Status: 200 OK
+

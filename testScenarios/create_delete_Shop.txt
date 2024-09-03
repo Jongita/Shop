@@ -1,0 +1,64 @@
+Create a Shop Scenario:
+
+Use method POST http://localhost:3000/shops
+
+Requirement: 
+
+Successfully create a shop.
+Request: POST /shops with JSON body:
+
+{   
+    "name": "Ana Shop", 
+    "location": "Gargzdai" 
+}
+
+
+Expected Result: 
+
+Status code 201 Created and response body containing the shop object with an id.
+
+
+Result:
+{
+    "id": "1725364099279",
+    "name": "Ana Shop",
+    "location": "Gargzdai"
+}
+
+Status: 201 Created
+
+
+Delete a Shop Scenario: 
+
+Use method DELETE http://localhost:3000/shops/1725364099279
+
+Requirement:  
+Successfully delete a shop with a valid ID.
+
+Request: 
+DELETE /shops/{id} with a valid shop ID.
+
+Expected result:
+Status code 204 No Content.
+
+
+Result: Status code 204 No Content.
+Next results: 404 Not Found.
+
+
+Requirement:  
+Error message is shown when trying to delete delete a shop with an invalid ID.
+
+Request:
+Try to delete a shop with an invalid ID. Use the same:
+http://localhost:3000/shops/1725364099279
+
+
+Expected Result: 
+Status code 404 Not Found and an error message indicating that the shop was not found.
+
+Result:
+{
+    "message": "Shop not found"
+}
+Status code 404 Not Found.

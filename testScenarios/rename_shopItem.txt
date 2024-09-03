@@ -1,0 +1,44 @@
+Rename a Shop Item
+
+
+
+requirements:
+Successfully rename a shop item with a valid ID.
+
+
+Request: 
+PUT http://localhost:3000/shopItems/1725365497327 with a valid shop item ID and JSON body were name will be changed from "Matas" to "Liepa"
+{
+    "id": "1725365497327",
+    "name": "Liepa",
+    "ItemName": "lova",
+    "price": 10.99,
+    "shopId": "1725363364807"
+}
+
+
+Expected Result: Status code 200 OK and response body containing the updated shop item object.
+
+{
+    "id": "1725365497327",
+    "name": "Liepa",
+    "ItemName": "lova",
+    "price": 10.99,
+    "shopId": "1725363364807"
+}
+
+Status code 200 OK.
+
+2. Verify that Shop Item was changed
+Request GET http://localhost:3000/shopItems
+
+Expected result:
+Status code 200 OK
+Body:
+{
+    "id": "1725365497327",
+    "name": "Liepa",
+    "ItemName": "lova",
+    "price": 10.99,
+    "shopId": "1725363364807"
+}

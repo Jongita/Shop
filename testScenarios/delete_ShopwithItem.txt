@@ -1,0 +1,19 @@
+Is not possible to delete a shop if it has items available.
+
+1. Create a Shop Item with existing shop ID:
+Use method Delete http://localhost:3000/shopItems/http://localhost:3000/shops/1725368165621
+
+
+2. Delete
+
+
+
+Expected result: 
+
+
+Result:
+Shop was deleted, shopItem exists.
+Status Code 204 No Content
+
+
+

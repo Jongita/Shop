@@ -1,0 +1,43 @@
+Assigning a shopItem to a shop
+
+
+1. Create a Shop Item with existing shop ID:
+Use method POST http://localhost:3000/shopItems
+
+Request: POST /shopItems with JSON body:
+{
+    "name": "Matas",
+    "ItemName": "lova",
+    "price": 10.99,
+    "shopId": "1725363364807"
+}
+
+Expected Result: 
+Status code 201 Created and response body containing the shop item object with an id.
+
+Result:
+{
+    "id": "1725365497327",
+    "name": "Matas",
+    "ItemName": "lova",
+    "price": 10.99,
+    "shopId": "1725363364807"
+}
+
+Status code: 201 Created
+
+2. Verify the Shop Item is Assigned to the Correct Shop
+Request GET http://localhost:3000/shopItems
+
+Expected result:
+Status code 200 OK
+Body:
+{
+    "id": "1725365497327",
+    "name": "Matas",
+    "ItemName": "lova",
+    "price": 10.99,
+    "shopId": "1725363364807"
+}
+
+
